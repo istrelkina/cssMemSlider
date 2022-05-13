@@ -90,7 +90,6 @@ label span {
    height: 0.6rem;
    border: 0.06rem solid #000;
    transition: all 0.5s;
-
 }
 
 #slide1:checked~.slider__panel>.controls>label:nth-of-type(1)>span,
@@ -135,4 +134,76 @@ label span {
    width: 18rem;
    height: 1.5rem;
    opacity: 1;
+}
+
+/* media */
+@media (max-width: 768px) {
+   html {
+      font-size: 12px;
+   }
+
+   .slider__wrapper {
+      height: 35rem;
+   }
+
+   .slider__panel {
+      flex-direction: column;
+      justify-content: center;
+      font-size: 1.5rem;
+   }
+
+   .controls {
+      order: -1;
+      justify-content: center;
+   }
+
+   .slider__text {
+      text-align: center;
+   }
+
+   #slide1:checked~.slider__panel>.slider__text>#text1,
+   #slide2:checked~.slider__panel>.slider__text>#text2,
+   #slide3:checked~.slider__panel>.slider__text>#text3,
+   #slide4:checked~.slider__panel>.slider__text>#text4,
+   #slide5:checked~.slider__panel>.slider__text>#text5 {
+      width: auto;
+      height: 2.5rem;
+   }
+
+   .text {
+      width: auto;
+   }
+}
+
+@media (max-width: 550px) {
+   html {
+      font-size: 7px;
+   }
+
+   h1 {
+      font-size: 4rem;
+   }
+
+   .slider__wrapper {
+      height: 38rem;
+   }
+
+   .slider__text {
+      font-size: 2.5rem;
+   }
+
+   .controls label {
+      cursor: pointer;
+      height: 2rem;
+      margin: 1rem;
+      width: 2rem;
+      padding: 1rem;
+   }
+
+   label span {
+      border-radius: 50%;
+      width: 1rem;
+      height: 1rem;
+      border: 0.1rem solid #000;
+   }
 }
