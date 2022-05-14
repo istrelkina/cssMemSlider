@@ -60,9 +60,16 @@ input[type="radio"] {
 .text {
    color: #fff;
    opacity: 0;
-   width: 0;
-   height: 0;
+   width: 18rem;
+   height: 1.5rem;
    transition: all 0.8s;
+}
+
+#text2,
+#text3,
+#text4,
+#text5 {
+   margin-top: -1.5rem;
 }
 
 .controls {
@@ -131,8 +138,6 @@ label span {
 #slide3:checked~.slider__panel>.slider__text>#text3,
 #slide4:checked~.slider__panel>.slider__text>#text4,
 #slide5:checked~.slider__panel>.slider__text>#text5 {
-   width: 18rem;
-   height: 1.5rem;
    opacity: 1;
 }
 
@@ -142,8 +147,24 @@ label span {
       font-size: 12px;
    }
 
+   body {
+      display: block;
+   }
+
+   h1 {
+      text-align: center;
+      margin-top: 50px;
+   }
+
    .slider__wrapper {
       height: 35rem;
+      width: 80%;
+      margin: 0 auto;
+
+   }
+
+   .slider {
+      width: 100%;
    }
 
    .slider__panel {
@@ -161,13 +182,17 @@ label span {
       text-align: center;
    }
 
-   #slide1:checked~.slider__panel>.slider__text>#text1,
-   #slide2:checked~.slider__panel>.slider__text>#text2,
-   #slide3:checked~.slider__panel>.slider__text>#text3,
-   #slide4:checked~.slider__panel>.slider__text>#text4,
-   #slide5:checked~.slider__panel>.slider__text>#text5 {
-      width: auto;
-      height: 2.5rem;
+   #slide1:checked~.slider>.item1,
+   #slide2:checked~.slider>.item2,
+   #slide3:checked~.slider>.item3,
+   #slide4:checked~.slider>.item4,
+   #slide5:checked~.slider>.item5 {
+      width: 100%;
+   }
+
+   .slider__item img {
+      object-fit: cover;
+      width: 100%;
    }
 
    .text {
@@ -185,7 +210,7 @@ label span {
    }
 
    .slider__wrapper {
-      height: 38rem;
+      height: 40rem;
    }
 
    .slider__text {
